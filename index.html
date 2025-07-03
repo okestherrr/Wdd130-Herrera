@@ -3,12 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Your Website</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for a clean, modern look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-50 text-gray-800; /* Light background, dark text */
+        }
+        /* Styling for placeholder images */
+        .placeholder-image {
+            @apply bg-gray-300 flex items-center justify-center text-gray-500 text-sm rounded-lg;
+            min-height: 200px; /* Default min-height for image placeholders */
+        }
+        .hero-image-placeholder {
+            @apply bg-gray-300 flex items-center justify-center text-gray-500 text-sm rounded-lg;
+            min-height: 300px; /* Taller for the hero section */
+        }
+        /* Button styling */
+        .btn-primary {
+            @apply bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-700 transition duration-300 ease-in-out shadow-md;
+        }
+        .btn-secondary {
+            @apply bg-white text-indigo-600 border border-indigo-600 px-6 py-3 rounded-full font-semibold hover:bg-indigo-50 transition duration-300 ease-in-out shadow-md;
+        }
+        /* New: Styling for button containers/boxes */
+        .button-box {
+            @apply border border-gray-300 rounded-lg p-3 flex justify-center items-center; /* Added padding and flex for centering */
+        }
+    </style>
 </head>
 <body>
-    This is the site for Daniel Herrera
 
-    okestherrr.github.io/Wdd130-Herrera/
-    
+    <!-- Topmost Bar - Matches the very top strip of image_0cf56e.png with larger logo spot -->
+    <div class="bg-gray-100 py-2 text-sm text-gray-600">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Left "Lorem" links -->
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-indigo-600 transition-colors duration-200">Lorem</a>
+                <a href="#" class="hover:text-indigo-600 transition-colors duration-200">Lorem</a>
+            </div>
+            <!-- New: Larger Logo Placeholder -->
+            <div class="w-32 h-10 bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 text-xs font-bold">
+                LOGO
+            </div>
+            <!-- Right "Lorem" links -->
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-indigo-600 transition-colors duration-200">Lorem</a>
+                <a href="#" class="hover:text-indigo-600 transition-colors duration-200">Lorem</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section (from image_0cf56e.png - main content area) -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-indigo-50 to-white">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <!-- Left Content -->
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900 mb-6">Medium length hero headline</h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
+                    Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vis ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <!-- Button with a box around it -->
+                    <div class="button-box">
+                        <button class="btn-primary">Button</button>
+                    </div>
+                    <!-- Button with a box around it -->
+                    <div class="button-box">
+                        <button class="btn-secondary">Button</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Image Placeholder -->
+            <div class="hero-image-placeholder w-full h-full">
+                <svg class="w-1/3 h-1/3 text-gray-400" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16v16H4V4zm14 2H6v12h12V6zM13 10l-3 4h6l-4-6-2 2z"/></svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section (from image_0cf56e.png - bottom) -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <!-- Left Card with Image and Button -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg text-center flex flex-col items-center">
+                <div class="placeholder-image w-full h-64 mb-6">
+                    <svg class="w-1/4 h-1/4 text-gray-400" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16v16H4V4zm14 2H6v12h12V6zM13 10l-3 4h6l-4-6-2 2z"/></svg>
+                </div>
+                <p class="text-gray-600 mb-6 text-sm">
+                    two cards, if the user clicks in the world icon active one and the other icon active the second one
+                </p>
+                <!-- Button with a box around it -->
+                <div class="button-box">
+                    <button class="btn-primary">Button</button>
+                </div>
+            </div>
+
+            <!-- Right Features List -->
+            <div class="text-center md:text-left">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Medium length features headline</h2>
+                <div class="space-y-8">
+                    <!-- Feature 1 -->
+                    <div class="flex items-start md:items-center flex-col md:flex-row">
+                        <div class="flex-shrink-0 mr-4 mb-2 md:mb-0">
+                            <svg class="h-8 w-8 text-indigo-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-1">Chemistry</h3>
+                            <p class="text-gray-600">Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="flex items-start md:items-center flex-col md:flex-row">
+                        <div class="flex-shrink-0 mr-4 mb-2 md:mb-0">
+                            <svg class="h-8 w-8 text-indigo-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-1">Atomic Physics</h3>
+                            <p class="text-gray-600">Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transition/Separator Section (from image_0cf553.png - top) -->
+    <section class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Lorem ipsum dolor sit amet et delectus</h2>
+            <div class="flex items-center justify-center space-x-4">
+                <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-500">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+                </div>
+                <div class="flex-grow h-px bg-gray-300"></div>
+                <div class="w-24 h-24 placeholder-image rounded-lg">
+                    <svg class="w-1/2 h-1/2 text-gray-400" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16v16H4V4zm14 2H6v12h12V6zM13 10l-3 4h6l-4-6-2 2z"/></svg>
+                </div>
+                <div class="flex-grow h-px bg-gray-300"></div>
+                <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center text-gray-500">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section (from image_0cf553.png - middle) -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+            <!-- Left Text Column -->
+            <div class="md:col-span-1">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Lorem ipsum dolor sit amet</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vis ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Modus argumentum ne quo tation efficiendi in eos. Ei mea falli legere efficiantur et nulla equidem mei. No deserunt mediocritatem sit. Et lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vis ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Modus argumentum ne quo tation efficiendi in eos. Ei mea falli legere efficiantur et nulla equidem mei. No deserunt mediocritatem sit. Sit munere facilis accusam eu dicat falli.
+                </p>
+            </div>
+            <!-- Middle Image Placeholder -->
+            <div class="md:col-span-1 flex justify-center items-center">
+                <div class="placeholder-image w-full max-w-xs h-64">
+                    <svg class="w-1/2 h-1/2 text-gray-400" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16v16H4V4zm14 2H6v12h12V6zM13 10l-3 4h6l-4-6-2 2z"/></svg>
+                </div>
+            </div>
+            <!-- Right Form Column -->
+            <div class="md:col-span-1 bg-gray-100 p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Lorem ipsum dolor form</h3>
+                <form class="space-y-4">
+                    <div>
+                        <label for="name" class="sr-only">Lorem ipsum</label>
+                        <input type="text" id="name" placeholder="Lorem ipsum" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label for="email" class="sr-only">Lorem ipsum</label>
+                        <input type="email" id="email" placeholder="Lorem ipsum" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label for="message" class="sr-only">Lorem ipsum</label>
+                        <textarea id="message" rows="4" placeholder="Lorem ipsum" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full">Button</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section (from image_0cf553.png - bottom) -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8">
+            <!-- Logo and Address -->
+            <div class="md:col-span-1">
+                <h3 class="text-xl font-bold text-white mb-4">Logo</h3>
+                <address class="not-italic text-sm leading-relaxed mb-4">
+                    Address:<br>
+                    123 Main Street, City<br>
+                    State Province, Country
+                </address>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 8.5H13v-2h2.5v2zm-4.5 0H8v-2h2.5v2zm4.5 4.5H13v-2h2.5v2zm-4.5 0H8v-2h2.5v2z"/></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 8.5H13v-2h2.5v2zm-4.5 0H8v-2h2.5v2zm4.5 4.5H13v-2h2.5v2zm-4.5 0H8v-2h2.5v2z"/></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 8.5H13v-2h2.5v2zm-4.5 0H8v-2h2.5v2zm4.5 4.5H13v-2h2.5v2zm-4.5 0H8v-2h2.5v2z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Link Columns -->
+            <div class="md:col-span-3 lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Column one</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Link one</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Link two</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Link three</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Link four</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Column two</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Link five</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Link six</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Link seven</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Link eight</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Column three</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Link nine</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Link ten</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Link eleven</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-200">Link twelve</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright and Policy -->
+        <div class="container mx-auto px-4 mt-8 pt-8 border-t border-gray-700 text-center text-sm text-gray-500 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <p>&copy; 2024 Your Website. All rights reserved.</p>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
